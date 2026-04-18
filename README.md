@@ -1,10 +1,10 @@
-# Diagrama de proyecto
-# Nombres : Brahian Gomez Rivera . Samuel Molina 
+# Diagrama de proyecto.
+# Nombres : Brahian Gomez Rivera . Samuel Molina Perez
 ![alt text](img/image.png)
 
-#  Proyecto: Página Web de Videojuegos
+#  Proyecto: Página Web de noticias de Videojuegos.
 
-##  Descripción General
+##  Descripción General.
 
 Este proyecto consiste en una página web básica enfocada en mostrar:
 
@@ -13,7 +13,7 @@ Este proyecto consiste en una página web básica enfocada en mostrar:
 -  Información detallada de videojuegos
 
 
-#  Arquitectura del Sistema
+#  Arquitectura del Sistema.
 
 El sistema está dividido en 4 capas principales:
 
@@ -24,7 +24,7 @@ El sistema está dividido en 4 capas principales:
 
 
 
-# 1️ Capa Cliente — Navegador
+# 1️ Capa Cliente — Navegador.
 
 Esta capa representa la interfaz con la que interactúa el usuario.
 
@@ -44,7 +44,7 @@ Permite al usuario:
 
 
 
-#  API HTTP
+#  API HTTP.
 
 Esta capa gestiona las solicitudes entre el cliente y el servidor.
 
@@ -60,7 +60,7 @@ Recibe las solicitudes del navegador y las redirige al controlador correspondien
 
 
 
-#  Backend
+#  Backend.
 
 Aquí se encuentra la lógica del negocio del sistema.
 
@@ -85,7 +85,7 @@ Esto evita duplicar código y mejora la organización del proyecto.
 
 
 
-# 4 Base de Datos
+# 4 Base de Datos.
 
 Contiene la información almacenada del sistema.
 
@@ -101,7 +101,7 @@ Guardar y proporcionar la información solicitada por el backend.
 
 
 
-# Flujo del Sistema
+# Flujo del Sistema.
 
 1. El usuario entra al Inicio desde el navegador.
 2. Selecciona una sección (Lanzamientos o Noticias).
@@ -113,7 +113,7 @@ Guardar y proporcionar la información solicitada por el backend.
 
 
 
-#  Objetivo del Proyecto
+#  Objetivo del Proyecto.
 
 Crear una plataforma informativa sencilla sobre videojuegos que:
 
