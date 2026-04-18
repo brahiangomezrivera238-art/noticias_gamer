@@ -1,5 +1,5 @@
 # Diagrama de proyecto.
-# Nombres : Brahian Gomez Rivera . Samuel Molina Perez
+# Nombres : Brahian Gomez Rivera.  .Samuel Molina Perez
 ![alt text](img/image.png)
 
 #  Proyecto: Página Web de noticias de Videojuegos.
