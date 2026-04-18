@@ -44,7 +44,7 @@ Permite al usuario:
 
 
 
-#  API HTTP.
+#2  API HTTP.
 
 Esta capa gestiona las solicitudes entre el cliente y el servidor.
 
@@ -60,7 +60,7 @@ Recibe las solicitudes del navegador y las redirige al controlador correspondien
 
 
 
-#  Backend.
+#3  Backend.
 
 Aquí se encuentra la lógica del negocio del sistema.
 
