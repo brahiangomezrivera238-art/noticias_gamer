@@ -1,0 +1,20 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "1234"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1780676093437,
+      "titulo": "lanzamiento de Grand Theft Auto VI",
+      "contenido": "Grand Theft Auto VI saldrá a la venta de forma oficial el 19 de noviembre de 2026. Así lo confirmó Rockstar Games y su matriz Take-Two Interactive, quienes además ratificaron que el desarrollo se mantiene firme y no sufrirá más retrasos",
+      "categoria": "Noticias",
+      "img": "https://media.vandal.net/m/6-2026/4/20266413515755_1.jpg",
+      "fecha": "5/6/2026",
+      "autorId": 1
+    }
+  ]
+}

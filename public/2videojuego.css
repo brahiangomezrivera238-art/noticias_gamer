@@ -1,0 +1,96 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f8fafc;
+    --accent: #38bdf8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-image: url('img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.75);
+    background-blend-mode: darken;
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header { text-align: center; padding: 2rem; border-bottom: 2px solid var(--accent); margin-bottom: 2rem; }
+
+.grid-container { display: grid; grid-template-columns: 300px 1fr; gap: 20px; max-width: 1200px; margin: 0 auto; flex: 1; }
+
+.card-glass { background: var(--card-bg); padding: 20px; border-radius: 12px; border: 1px solid #334155; margin-bottom: 20px; }
+
+/* Formularios */
+input, textarea, select { width: 100%; padding: 10px; margin: 10px 0; background: #0f172a; border: 1px solid #334155; color: white; border-radius: 5px; }
+.btn-neon { background: var(--accent); color: var(--bg-color); border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; transition: 0.3s; }
+.btn-neon:hover { background: #0284c7; color: white; }
+.btn-logout { background: #ef4444; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin-top: 10px; cursor: pointer; width: 100%; }
+
+/* Noticias */
+.feed-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.posts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.news-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; transition: transform 0.3s ease; border: 1px solid #334155; }
+.news-card:hover { transform: translateY(-5px); }
+.news-img { width: 100%; height: 200px; object-fit: cover; }
+.news-body { padding: 15px; }
+.badge { background: var(--accent); color: var(--bg-color); padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; }
+
+/* Footer y Botón Secreto */
+.site-footer { text-align: center; margin-top: 50px; padding: 20px; }
+.btn-secret { background: none; border: none; color: #475569; cursor: pointer; font-size: 0.8rem; margin-top: 10px; }
+.btn-secret:hover { color: var(--accent); }
+
+/* Ventana Emergente (Modal) */
+.modal {
+    display: none; 
+    position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center; justify-content: center;
+}
+.modal-content { width: 100%; max-width: 400px; position: relative; }
+.close-btn { position: absolute; top: 10px; right: 15px; color: #94a3b8; font-size: 24px; font-weight: bold; cursor: pointer; }
+.close-btn:hover { color: white; }
+
+/* =================================================== */
+/* NUEVOS AJUSTES: BARRA LATERAL MÁS PEQUEÑA Y DISCRETA */
+/* =================================================== */
+
+/* 1. Hace que toda la columna izquierda sea más angosta (pasó de 300px a 240px) */
+.grid-container {
+    grid-template-columns: 240px 1fr;
+}
+
+/* 2. Reduce el espacio interno del cuadro oscuro para que no se vea tan gigante */
+.card-glass {
+    padding: 15px;      /* Menos margen interno */
+    margin-bottom: 15px; /* Menos separación con lo de abajo */
+}
+
+/* 3. Reduce ligeramente el tamaño de los títulos en la barra lateral */
+#sidebar h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* 4. Hace que los textos explicativos sean más pequeños y sutiles */
+#sidebar p {
+    font-size: 0.8rem !important;
+}
+
+/* 5. Hace los cuadros de texto y el botón un poco más compactos */
+#sidebar input, 
+#sidebar textarea, 
+#sidebar button {
+    padding: 8px;
+    font-size: 0.85rem;
+    margin: 6px 0;
+}
