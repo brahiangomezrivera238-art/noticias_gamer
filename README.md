@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 🎮 Gaming Pulse - Portal Pro
 
 ## Descripción
@@ -7,7 +7,7 @@ Gaming Pulse es una aplicación web full-stack diseñada para la gestión y publ
 ## Integrantes
 * **Brahian David Gómez Rivera** - Desarrollo Backend y Frontend.
 * **Samuel molina** - Documentación y Pruebas - Diseño de UI/UX y Arquitectura.
-=======
+
 # Diagrama de proyecto.
 Brahian Gomez Rivera.  .Samuel Molina Perez
 ![alt text](img/image.png)
@@ -15,7 +15,7 @@ Brahian Gomez Rivera.  .Samuel Molina Perez
 #  Proyecto: Página Web de noticias de Videojuegos.
 
 ##  Descripción General.
->>>>>>> 39b963b2ebc4f5d85a300f6fcae0457c0d324f9b
+
 
 ## Stack Tecnológico
 * **Frontend:** HTML5, CSS3, JavaScript Vanilla (Fetch API). Elegido por su ligereza y control total sobre el DOM sin dependencias.
@@ -32,15 +32,13 @@ El proyecto sigue un patrón Cliente-Servidor (SPA + API). Para más detalles, c
 * Formulario de contacto para reclutamiento de redactores.
 * Diseño UI/UX responsivo (Glassmorphism).
 
-<<<<<<< HEAD
+
 ## Cómo ejecutar localmente
 1. Clonar el repositorio: `git clone [URL_DEL_REPO]`
 2. Instalar dependencias: `npm install express`
 3. Iniciar el servidor: `node server.js`
 4. Abrir en el navegador: `http://localhost:3000`
-=======
-#  Arquitectura del Sistema.
->>>>>>> 39b963b2ebc4f5d85a300f6fcae0457c0d324f9b
+
 
 ## Endpoints Principales
 | Método | Endpoint | Descripción |
@@ -50,11 +48,24 @@ El proyecto sigue un patrón Cliente-Servidor (SPA + API). Para más detalles, c
 | DELETE | `/api/posts/:id` | Elimina una noticia por ID |
 | POST | `/api/login` | Valida credenciales de acceso |
 
-<<<<<<< HEAD
+
 ## Documentación
 * [Software Requirements Specification (SRS)](docs/SRS.md)
 * [Arquitectura y Tecnologías](docs/arquitectura.md)
-=======
+
+
+Este proyecto consiste en una página web básica enfocada en mostrar:
+
+-  Lanzamientos de videojuegos
+-  Noticias del sector gaming
+-  Información detallada de videojuegos
+
+
+#  Arquitectura del Sistema.
+
+El sistema está dividido en 4 capas principales:
+
+
 1. Capa Cliente (Frontend)
 2. API HTTP
 3. Backend
@@ -158,4 +169,3 @@ Crear una plataforma informativa sencilla sobre videojuegos que:
 - Sea clara y organizada
 - Tenga separación de responsabilidades
 - Permita escalar fácilmente en el futuro
->>>>>>> 39b963b2ebc4f5d85a300f6fcae0457c0d324f9b
