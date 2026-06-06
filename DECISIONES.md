@@ -3,26 +3,26 @@
 ##  Análisis de Proyecto: Portal de Publicaciones de Videojuegos
 
 ### 1. ¿Quién usa el sistema? (Actores)
-Para un portal de contenido básico, identificamos tres perfiles clave:
+
 * **Visitante (Lector):** Usuarios interesados en videojuegos que consumen el contenido (noticias, reseñas, guías) sin necesidad de registrarse.
 * **Administrador / Editor:** La persona (tú) que gestiona el sitio, redacta las publicaciones, sube imágenes y organiza las categorías.
 * **Sistema Externo (Opcional):** APIs de redes sociales (para compartir contenido) o servicios de hosting de imágenes.
 
 ### 2. ¿Qué necesita hacer? (Acciones principales)
-Nos enfocamos en la funcionalidad pura, sin pensar aún en el código:
+
 * **Lectura de contenido:** El visitante debe poder listar las publicaciones más recientes y leer una publicación completa.
 * **Gestión de publicaciones:** El administrador debe poder Crear, Leer, Actualizar y Eliminar (CRUD) artículos.
 * **Categorización:** El sistema debe permitir filtrar publicaciones por plataforma (PC, PS5, Xbox, Switch) o género.
 * **Búsqueda:** Permitir al usuario encontrar temas específicos mediante palabras clave.
 
 ### 3. ¿Qué datos maneja? (Información)
-Aquí definimos el "corazón" de tu base de datos o estructura de archivos:
+
 * **Entrada:** Títulos de artículos, cuerpo de texto (Markdown o HTML), imágenes de portada, etiquetas (tags), fecha de publicación y credenciales de acceso para el administrador.
 * **Transformación:** El sistema toma el texto plano y lo formatea para la web; organiza las listas de artículos de forma cronológica descendente.
 * **Salida:** Páginas HTML renderizadas, feeds de noticias, resultados de búsqueda y mensajes de confirmación de publicación.
 
 ### 4. ¿Qué restricciones existen? (Reglas de negocio)
-Estas son las "fronteras" de tu proyecto para no perder el enfoque:
+
 * **Seguridad:** Solo el administrador autenticado puede crear o borrar contenido; el visitante es estrictamente de "solo lectura".
 * **Formato:** Las imágenes no deben exceder un peso específico (ej. 2MB) para mantener la velocidad de carga.
 * **Simplicidad:** Al ser una página "básica", no se incluirán sistemas de comentarios complejos ni perfiles de usuario para visitantes en esta primera fase.

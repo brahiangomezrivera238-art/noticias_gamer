@@ -8,11 +8,38 @@
   ],
   "posts": [
     {
-      "id": 1780676093437,
-      "titulo": "lanzamiento de Grand Theft Auto VI",
-      "contenido": "Grand Theft Auto VI saldrá a la venta de forma oficial el 19 de noviembre de 2026. Así lo confirmó Rockstar Games y su matriz Take-Two Interactive, quienes además ratificaron que el desarrollo se mantiene firme y no sufrirá más retrasos",
+      "id": 1780723027538,
+      "titulo": "El gran desafío de las consolas de videojuegos y los PC en 2026 según un experto en tecnología",
+      "contenido": "Rincón de Varo, experto en tecnología: “2026 será un desastre para PC, consolas y todo lo que tenga en su interior memoria RAM”\n2026 va a ser un año muy difícil para los amantes de los videojuegos, ya sea en consolas o en PC. Un influencer especializado en hardware y tecnología nos lo explica.\nComo ya sabréis si estáis informados de las últimas noticias en ámbitos como videojuegos y tecnología, el mundo del hardware de PC está en una encrucijada enorme. La creciente demanda de componentes de las compañías especializadas en inteligencia artificial ha provocado un agotamiento y un repunte de precios que hace que, para el usuario “de a pie”, sea cada vez más inasumible el coste de piezas críticas para los ordenadores, como las RAM y los SSD",
+      "categoria": "Hardware",
+      "img": "https://img.asmedia.epimg.net/resizer/v2/76LG64GCERA4XOMW7BMCQIKUJI.jpg?auth=a31efeaa2c3e758f2fa48adb653ede2b486486b849e0d174a9706904330e4d81&width=760&height=428&smart=true",
+      "fecha": "6/6/2026",
+      "autorId": 1
+    },
+    {
+      "id": 1780722784701,
+      "titulo": "Bancho The Chef",
+      "contenido": "Saboread lo que es convertirse en un maestro del sushi en Bancho The Chef, un simulador gastronómico mezclado con el popular género del RPG en una precuela independiente del juego Dave the Diver. Cocinad platos para satisfacer a vuestros clientes y mejorar la reputación del restaurante en todo el mundo, mientras aprendéis técnicas de los maestros culinarios de cada lugar. Al igual que los platos que prepara, Bancho no se limita a un solo tipo de género: pescad, domesticad gatos, aceptad comandas y muchas cosas más. ",
       "categoria": "Noticias",
-      "img": "https://media.vandal.net/m/6-2026/4/20266413515755_1.jpg",
+      "img": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3596430/8bf9bc593197c878c4f5396725d7bd79f86ecd71/capsule_616x353.jpg?t=1780438904",
+      "fecha": "6/6/2026",
+      "autorId": 1
+    },
+    {
+      "id": 1780722671921,
+      "titulo": "Ace Combat 8: Wings of Theve",
+      "contenido": "El simulador de combates aéreos de Bandai Namco despegará en PS5 el 2 de octubre de este año. El juego promete una emocionante campaña y nuevas maniobras tácticas para derribar aviones enemigos y objetivos terrestres, así como encuentros contra colosales aeronaves de transporte continental y naves terrestres. Podréis pilotar 30 aviones distintos, incluidos cazas del mundo real y modelos ficticios. ",
+      "categoria": "Reseñas",
+      "img": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2288340/3bd993fa9f94ebd60c1b05dd61a4315cde829830/capsule_616x353.jpg?t=1780645313",
+      "fecha": "6/6/2026",
+      "autorId": 1
+    },
+    {
+      "id": 1780719494978,
+      "titulo": "lanzamiento de Grand Theft Auto VI",
+      "contenido": "lanzamiento de Grand Theft Auto VI\nlanzamiento de Grand Theft Auto VI Grand Theft Auto VI saldrá a la venta de forma oficial el 19 de noviembre de 2026. Así lo confirmó Rockstar Games y su matriz Take-Two Interactive, quienes además ratificaron que el desarrollo se mantiene firme y no sufrirá más retrasos\n\n📅 5/6/2026\n",
+      "categoria": "Noticias",
+      "img": "https://images.hdqwalls.com/wallpapers/gta-vi-jp.jpg",
       "fecha": "5/6/2026",
       "autorId": 1
     }

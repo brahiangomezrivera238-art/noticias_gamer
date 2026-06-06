@@ -45,7 +45,24 @@
                         <option value="Hardware">Hardware</option>
                     </select>
                     <button type="submit" class="btn-neon">Publicar</button>
-                    <button type="button" onclick="logout()" class="btn-logout">Cerrar Sesión</button>
+                    <button type="button" onclick="logout()" class="btn-logout" style="margin-top: 10px;">Cerrar Sesión</button>
+                </form>
+            </div>
+
+            <div id="edit-section" class="card-glass" style="display: none; border-color: #eab308;">
+                <h2 style="color: #eab308;">✏️ Editar Post</h2>
+                <form id="editForm">
+                    <input type="hidden" id="editId">
+                    <input type="text" id="editTitle" placeholder="Título de la noticia" required>
+                    <textarea id="editContent" placeholder="Breve descripción..." rows="3" required></textarea>
+                    <input type="url" id="editImg" placeholder="URL Imagen (https://...)" required>
+                    <select id="editCategory">
+                        <option value="Noticias">Noticias</option>
+                        <option value="Reseñas">Reseñas</option>
+                        <option value="Hardware">Hardware</option>
+                    </select>
+                    <button type="submit" class="btn-neon" style="background-color: #eab308; color: black; box-shadow: 0 0 10px #eab308;">Guardar Cambios</button>
+                    <button type="button" onclick="cancelEdit()" class="btn-logout" style="margin-top: 10px;">Cancelar Edición</button>
                 </form>
             </div>
         </aside>

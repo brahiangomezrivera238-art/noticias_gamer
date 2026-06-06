@@ -42,20 +42,43 @@ app.post('/api/posts', (req, res) => {
     res.status(201).json(newPost);
 });
 
+// ACTUALIZAR NOTICIA (Con Rayos X)
+app.put('/api/posts/:id', (req, res) => {
+    try {
+        const db = readDB();
+        const id = req.params.id; 
+        const { titulo, contenido, categoria, img } = req.body;
+
+        const postIndex = db.posts.findIndex(p => String(p.id) === String(id));
+        
+        if (postIndex !== -1) {
+            db.posts[postIndex].titulo = titulo;
+            db.posts[postIndex].contenido = contenido;
+            db.posts[postIndex].categoria = categoria;
+            db.posts[postIndex].img = img;
+            
+            writeDB(db);
+            res.json(db.posts[postIndex]); // Todo salió bien
+        } else {
+            res.status(404).json({ message: "La base de datos no encontró el ID de esta noticia." });
+        }
+    } catch (error) {
+        res.status(500).json({ message: "El archivo database.json tiene un problema." });
+    }
+});
+
 // ELIMINAR NOTICIA
 app.delete('/api/posts/:id', (req, res) => {
     const db = readDB();
-    const id = parseInt(req.params.id);
-    db.posts = db.posts.filter(p => p.id !== id);
+    const idABorrar = String(req.params.id);
+    db.posts = db.posts.filter(p => String(p.id) !== idABorrar);
     writeDB(db);
     res.json({ success: true });
 });
 
-// LOGIN (ÚNICO Y CORREGIDO)
+// LOGIN
 app.post('/api/login', (req, res) => {
     const { username, password } = req.body;
-    
-    // Aquí validamos. Si quieres cambiar la clave, hazlo aquí.
     if (username === 'admin' && password === '1234') {
         res.json({ success: true, userId: 1, username: 'admin' });
     } else {

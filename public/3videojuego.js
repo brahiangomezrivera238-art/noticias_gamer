@@ -14,15 +14,15 @@ async function loadPosts() {
 // CONTROL DE INTERFAZ
 function checkLoginState() {
     if (currentUser) {
-        // Si hay sesión: Ocultar contacto/login, Mostrar editor
         document.getElementById('contact-section').style.display = 'none';
         document.getElementById('login-section').style.display = 'none';
         document.getElementById('editor-section').style.display = 'block';
+        document.getElementById('edit-section').style.display = 'none'; 
     } else {
-        // Si no hay sesión: Mostrar contacto/login, Ocultar editor
         document.getElementById('contact-section').style.display = 'block';
         document.getElementById('login-section').style.display = 'block';
         document.getElementById('editor-section').style.display = 'none';
+        document.getElementById('edit-section').style.display = 'none';
     }
     renderPosts();
 }
@@ -47,7 +47,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
             sessionStorage.setItem('gp_user', JSON.stringify(currentUser));
             document.getElementById('loginError').style.display = 'none';
             document.getElementById('loginForm').reset();
-            checkLoginState(); // Actualiza la pantalla mágicamente
+            checkLoginState(); 
         } else {
             document.getElementById('loginError').style.display = 'block';
         }
@@ -106,10 +106,10 @@ function renderPosts() {
     const filtered = posts.filter(p => filter === 'todos' || p.categoria === filter);
 
     filtered.forEach(p => {
-        // Solo muestra el botón borrar si el admin inició sesión
         const adminButtons = currentUser ? `
-            <div style="display:flex; gap:10px;">
-                <button onclick="deletePost(${p.id})" style="color:var(--accent); background:none; border:none; cursor:pointer; font-weight:bold;">Borrar</button>
+            <div style="display:flex; gap:15px;">
+                <button onclick="prepareEdit(${p.id})" style="color:#eab308; background:none; border:none; cursor:pointer; font-weight:bold; font-size: 0.9rem;">✏️ Editar</button>
+                <button onclick="deletePost(${p.id})" style="color:var(--accent); background:none; border:none; cursor:pointer; font-weight:bold; font-size: 0.9rem;">🗑️ Borrar</button>
             </div>
         ` : '';
 
@@ -137,6 +137,70 @@ async function deletePost(id) {
         await loadPosts();
     }
 }
+
+// ==========================================
+// CRUD: EDITAR (Versión con Alertas)
+// ==========================================
+
+function prepareEdit(id) {
+    const post = posts.find(p => p.id === id);
+    if (!post) return;
+
+    document.getElementById('editId').value = post.id;
+    document.getElementById('editTitle').value = post.titulo;
+    document.getElementById('editContent').value = post.contenido;
+    document.getElementById('editImg').value = post.img;
+    document.getElementById('editCategory').value = post.categoria;
+
+    document.getElementById('editor-section').style.display = 'none';
+    document.getElementById('edit-section').style.display = 'block';
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function cancelEdit() {
+    document.getElementById('editForm').reset();
+    document.getElementById('edit-section').style.display = 'none';
+    document.getElementById('editor-section').style.display = 'block';
+}
+
+// AQUÍ ESTÁ LA MAGIA PARA VER EL ERROR
+document.getElementById('editForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const id = document.getElementById('editId').value;
+    const updatedData = {
+        titulo: document.getElementById('editTitle').value,
+        contenido: document.getElementById('editContent').value,
+        img: document.getElementById('editImg').value,
+        categoria: document.getElementById('editCategory').value
+    };
+
+    try {
+        const res = await fetch(`/api/posts/${id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(updatedData)
+        });
+
+        if (res.ok) {
+            cancelEdit(); 
+            await loadPosts(); 
+        } else {
+            // Si hay error, leemos el mensaje exacto que manda el servidor
+            let errorMsg = "Error desconocido";
+            try {
+                const errorData = await res.json();
+                errorMsg = errorData.message;
+            } catch(err) {
+                errorMsg = "No se encontró la ruta en el servidor (Posible caché vieja).";
+            }
+            alert("⚠️ Fallo al guardar: " + errorMsg);
+        }
+    } catch (error) {
+        alert("⚠️ Error de red o servidor apagado.");
+    }
+});
 
 // FILTRO DE CATEGORÍAS
 document.getElementById('filterCategory').addEventListener('change', renderPosts);
